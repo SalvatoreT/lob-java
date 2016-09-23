@@ -15,7 +15,7 @@ import com.lob.protocol.response.ErrorResponse;
 import org.joda.time.DateTime;
 import org.junit.Test;
 
-import java.net.URI;
+import com.ning.http.client.uri.Uri;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
@@ -75,7 +75,7 @@ public class AddressTest extends BaseTest {
         catch (final ExecutionException e) {
             final LobApiException lobException = (LobApiException) e.getCause();
             assertFalse(lobException.getMessage().isEmpty());
-            assertTrue(lobException.getUri() instanceof URI);
+            assertTrue(lobException.getUri() instanceof Uri);
             assertTrue(lobException.getErrorResponse() instanceof ErrorResponse);
             assertNotNull(lobException.getErrorResponse().toString());
             assertNotNull(lobException.getErrorResponse().getError().getMessage());

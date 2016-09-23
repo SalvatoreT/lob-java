@@ -9,10 +9,8 @@ public interface Router {
     String CHECKS = "checks";
     String OBJECTS = "objects";
     String LETTERS = "letters";
-    String PACKAGINGS = "packagings";
     String POSTCARDS = "postcards";
     String ROUTES = "routes";
-    String SERVICES = "services";
     String SETTINGS = "settings";
     String STATES = "states";
     String VERIFY = "verify";
